@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Legend of Zelda : Ganon's return</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Germania+One" rel="stylesheet">
+        <script src="js/script.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <div>
+                <h1>THE LEGEND OF ZELDA</h1>
+                <h4>Ganondorf's return</h4>
+            </div>
+            <a href="index.html"><img src="images/shield.png" alt="logo zelda"></a>
+        </header>
+        <main>
+            <figure class="game-state_link">
+                <img class="linkAnim" src="images/link.png" alt="link">
+                <figcaption><progress id="pvLink" value='' max=''></progress></figcaption>
+                <p id="pvTextLink"></p>
+            </figure>
+            <figure class="game-state_ganon">
+                <img class="ganonAnim" src="images/ganon.png" alt="Ganon">
+                <figcaption><progress id="pvGanon" value='' max=''></progress></figcaption>
+                <p id="pvTextGanon"></p>
+            </figure>
+            <div class="game">
+                <div id="pre-game">
+                    <h2>Veuillez saisir votre difficulté héro !</h2>
+                    <div id="difficulty_choice">
+                        <div class="btn_diff" onclick="initializeGame('facile')"><img src="images/facile.PNG" alt="facile" onmouseover="playSounds('cursor')" onclick="playSounds('choice')"></div>
+                        <div class="btn_diff" onclick="initializeGame('normal')"><img src="images/normal.png" alt="normal" onmouseover="playSounds('cursor')" onclick="playSounds('choice')"></div>
+                        <div class="btn_diff" onclick="initializeGame('difficile') "><img src="images/difficile.PNG" alt="difficile" onmouseover="playSounds('cursor')" onclick="playSounds('choice')"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    <img src="images/cloud1.png" alt="" id="cloud1" class="cloud">
+    <img src="images/cloud2.png" alt="" id="cloud2" class="cloud">
+    </body>
+</html>

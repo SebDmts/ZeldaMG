@@ -1,0 +1,326 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin : 0;
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  background-attachment : fixed;
+  background-repeat: no-repeat;
+  font-family: 'Germania One', cursive;
+  font-size: 2.5vw;
+  line-height : 1.4;
+}
+
+header {
+  padding: 20px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 20px;
+}
+
+header img {
+  position: absolute;
+  width: 10%;
+  top: 0;
+  right: 45%
+}
+
+header div{
+  display: flex;
+  justify-content: space-between;
+}
+
+img {
+  max-width: 80%;
+}
+
+figure {
+  margin : 0;
+}
+
+h1 {
+  font-size: 110%;
+  margin: 0px;
+  font-weight: bold;
+}
+
+h2, h3 {
+  margin : 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 100%;
+  padding: 5% 10% 5% 10%;
+  border-bottom : 2px dotted black;
+}
+
+h3 {
+  border-bottom : 2px dotted black;
+  font-size: 120%;
+}
+
+h4 {
+  margin: 0;
+  font-size: 80%;
+  align-self: center;
+  font-weight: normal;
+}
+
+p {
+  font-size: 60%;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  min-height: 600px;
+  align-items: top;
+}
+
+.game{
+  overflow-y: auto;
+  background: rgba(255,255,255,0.6);
+  border-radius: 1rem;
+  flex-basis: 30%;
+  max-height: 28ch;
+  order: 1;
+  text-align: center;
+  margin-top: 6%;
+
+}
+
+.game figure img {
+  max-width: 40%;
+  margin-top: 7%;
+}
+
+.game figcaption{
+  font-size: 60%;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.game-round {
+  text-align: center;
+}
+
+.game-state_link, .game-state_ganon{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: flex-start;
+  align-items: center;
+  flex-basis: 30%;
+  margin-top: 8%;
+}
+
+.game-state_ganon{
+  order: 2;
+}
+
+.game-state_link {
+  order: 1;
+}
+
+.ganonAnim, .linkAnim {
+  min-height: 45%;
+  max-height: 55%;
+}
+
+/* Animated clouds */
+.cloud {
+    position: fixed;
+    z-index:10;
+    opacity: 0.8;
+    animation: cloudPassingBy linear infinite;
+}
+
+
+#cloud1 {
+    top:2vw;
+    left:-20vw;
+    width: 20%;
+    animation-duration: 50s;
+}
+
+#cloud2 {
+    top:10vw;
+    left:-20vw;
+    width: 20%;
+    animation-duration: 30s;
+}
+
+@keyframes cloudPassingBy {
+    from { transform: translateX(0px); }
+    to { transform: translateX(600%); }
+}
+
+#pvTextLink, #pvTextGanon {
+  color: black;
+  margin-top: -9%;
+}
+
+/* BONUS */
+progress {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #b6b6b6;
+  box-shadow: 0 0 0 3px #b6b6b6;
+  color: black;
+  margin-top: 15%;
+}
+
+progress::-webkit-progress-value {
+  background-color: #ec3737;
+}
+
+progress::-moz-progress-bar {
+  background-color: #ec3737;
+}
+
+
+#difficulty_choice{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15%;
+}
+
+.btn_diff {
+  width: 33%;
+}
+
+
+.btn_diff:hover {
+  width: 300px;
+  border-bottom: 20px solid chocolate;
+  border-radius: 10%;
+  padding-left: 5px;
+  cursor: url('../images/sword.png'), default;
+}
+
+
+.start_button {
+  background-color: chocolate;
+  border-radius: 5px;
+  margin: 6% auto 0 auto;
+  text-align: center;
+  width: 35%;
+  font-size: 60%;
+  border: 3px solid black;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  margin-bottom: 20%;
+}
+
+.next_button, .newGameBut{
+  display: flex;
+  justify-content: center;
+  background-color: chocolate;
+  border-radius: 5px;
+  margin: 10% auto 20% auto;
+  text-align: center;
+  width: 35%;
+  border: 3px solid black;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+.next_button a, .newGameBut a {
+  font-size: 60%;
+}
+
+
+.next_button:hover, .newGameBut:hover, .start_button:hover{
+  background-color: #ec4037;
+  cursor: url('../images/sword.png'), default;
+}
+
+.img_combat {
+  margin-top: 10%;
+  border: 3px solid rgb(26, 22, 22);
+  border-radius: 10px;
+  width: 90%;
+}
+
+
+
+
+
+@-webkit-keyframes wobbleInv {
+	0% {
+		-webkit-transform: translateZ(0);
+		transform: translateZ(0)
+	}
+	15% {
+		-webkit-transform: translate3d(25%, 0, 0) rotate(5deg);
+		transform: translate3d(25%, 0, 0) rotate(5deg)
+	}
+	30% {
+		-webkit-transform: translate3d(-20%, 0, 0) rotate(-3deg);
+		transform: translate3d(-20%, 0, 0) rotate(-3deg)
+	}
+	45% {
+		-webkit-transform: translate3d(15%, 0, 0) rotate(3deg);
+		transform: translate3d(15%, 0, 0) rotate(3deg)
+	}
+	60% {
+		-webkit-transform: translate3d(-10%, 0, 0) rotate(-2deg);
+		transform: translate3d(-10%, 0, 0) rotate(-2deg)
+	}
+	75% {
+		-webkit-transform: translate3d(5%, 0, 0) rotate(1deg);
+		transform: translate3d(5%, 0, 0) rotate(1deg)
+	}
+	to {
+		-webkit-transform: translateZ(0);
+		transform: translateZ(0)
+	}
+}
+
+@keyframes wobbleInv {
+	0% {
+		-webkit-transform: translateZ(0);
+		transform: translateZ(0)
+	}
+	15% {
+		-webkit-transform: translate3d(25%, 0, 0) rotate(5deg);
+		transform: translate3d(25%, 0, 0) rotate(5deg)
+	}
+	30% {
+		-webkit-transform: translate3d(-20%, 0, 0) rotate(-3deg);
+		transform: translate3d(-20%, 0, 0) rotate(-3deg)
+	}
+	45% {
+		-webkit-transform: translate3d(15%, 0, 0) rotate(3deg);
+		transform: translate3d(15%, 0, 0) rotate(3deg)
+	}
+	60% {
+		-webkit-transform: translate3d(-10%, 0, 0) rotate(-2deg);
+		transform: translate3d(-10%, 0, 0) rotate(-2deg)
+	}
+	75% {
+		-webkit-transform: translate3d(5%, 0, 0) rotate(1deg);
+		transform: translate3d(5%, 0, 0) rotate(1deg)
+	}
+	to {
+		-webkit-transform: translateZ(0);
+		transform: translateZ(0)
+	}
+}
+
+.animate__wobbleInv {
+	-webkit-animation-name: wobbleInv;
+	animation-name: wobbleInv
+}
